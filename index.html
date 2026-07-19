@@ -276,7 +276,7 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 // レース確定ごとに回顧が公開される。開いているタブを15秒ごとにサーバ版と照合し、更新時のみ自動リロード。
-const BUILD_ID="20260719091347";
+const BUILD_ID="20260719092610";
 setInterval(async()=>{try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});
   const t=await r.text();const m=t.match(/BUILD_ID="(\d+)"/);
   if(m&&m[1]!==BUILD_ID){const to=document.createElement('div');to.textContent='🔄 新しい回顧が公開されました — 更新します';
